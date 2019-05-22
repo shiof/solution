@@ -40,7 +40,7 @@ public class ValidBracketsTest {
     @Test
     public void test6() {
         boolean b = new ValidBrackets().solution("");
-        Assert.assertFalse(b);
+        Assert.assertTrue(b);
     }
     @Test
     public void test7() {
