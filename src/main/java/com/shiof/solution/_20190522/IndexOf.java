@@ -1,7 +1,7 @@
 package com.shiof.solution._20190522;
 
 /**
- * 28. 实现strStr()
+ * <a href="https://leetcode-cn.com/problems/implement-strstr/">28. 实现strStr()</a>
  * <p>
  * 实现 strStr() 函数。
  * <p>
@@ -19,7 +19,6 @@ package com.shiof.solution._20190522;
  *
  * @author spwang on 2019/5/22 15:26
  * @version 1.0.0
- * @see <a href="https://leetcode-cn.com/problems/implement-strstr/" /a>
  * @since 1.0.0
  */
 public class IndexOf {

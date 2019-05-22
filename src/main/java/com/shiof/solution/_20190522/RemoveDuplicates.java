@@ -1,7 +1,7 @@
 package com.shiof.solution._20190522;
 
 /**
- * 26. 删除排序数组中的重复项
+ * <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26. 删除排序数组中的重复项</a>
  * <p>
  * 给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
  * <p>
@@ -15,7 +15,6 @@ package com.shiof.solution._20190522;
  *
  * @author spwang on 2019/5/22 11:22
  * @version 1.0.0
- * @see <a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/"/>
  * @since 1.0.0
  */
 public class RemoveDuplicates {

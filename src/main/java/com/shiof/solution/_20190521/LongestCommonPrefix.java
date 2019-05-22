@@ -1,6 +1,8 @@
 package com.shiof.solution._20190521;
 
 /**
+ * <a href="https://leetcode-cn.com/problems/longest-common-prefix/">14. 最长公共前缀</a>
+ * <p>
  * 编写一个函数来查找字符串数组中的最长公共前缀。  如果不存在公共前缀，返回空字符串 ""。
  *
  * @author spwang on 2019/5/21 17:26
@@ -11,9 +13,9 @@ public class LongestCommonPrefix {
 
     public String solution3(String[] strs) {
         if (strs == null || strs.length == 0) return "";
-        for (int i = 0; i < strs[0].length() ; i++){
+        for (int i = 0; i < strs[0].length(); i++) {
             char c = strs[0].charAt(i);
-            for (int j = 1; j < strs.length; j ++) {
+            for (int j = 1; j < strs.length; j++) {
                 if (i == strs[j].length() || strs[j].charAt(i) != c)
                     return strs[0].substring(0, i);
             }
@@ -21,7 +23,7 @@ public class LongestCommonPrefix {
         return strs[0];
     }
 
-    public String solution2(String[] strs){
+    public String solution2(String[] strs) {
         if (strs.length == 0) return "";
         String prefix = strs[0];
         for (int i = 1; i < strs.length; i++)
@@ -32,7 +34,7 @@ public class LongestCommonPrefix {
         return prefix;
     }
 
-    public String solution(String[] strs){
+    public String solution(String[] strs) {
         if (strs.length == 0) return "";
         String shortestStr = strs[0];
         for (String s : strs) {

@@ -3,7 +3,7 @@ package com.shiof.solution._20190522;
 import com.shiof.solution.common.ListNode;
 
 /**
- * 21. 合并两个有序链表
+ * <a href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a>
  * <p>
  * 将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  * <p>
@@ -38,7 +38,7 @@ public class MergeTwoLists {
 
         ListNode nextNode = header;
         while (l1 != null && l2 != null) {
-            nextNode.next= nextNode = new ListNode(Math.min(l1.val, l2.val));
+            nextNode.next = nextNode = new ListNode(Math.min(l1.val, l2.val));
             if (l1.val <= l2.val) {
                 l1 = l1.next;
             } else {

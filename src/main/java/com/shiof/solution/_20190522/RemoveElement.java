@@ -1,7 +1,7 @@
 package com.shiof.solution._20190522;
 
 /**
- * 27. 移除元素
+ * <a href="https://leetcode-cn.com/problems/remove-element/">27. 移除元素</a>
  * <p>
  * 给定一个数组 nums 和一个值 val，你需要原地移除所有数值等于 val 的元素，返回移除后数组的新长度。
  * <p>
@@ -17,7 +17,6 @@ package com.shiof.solution._20190522;
  *
  * @author spwang on 2019/5/22 15:02
  * @version 1.0.0
- * @see <a href="https://leetcode-cn.com/problems/remove-element/"  /a>
  * @since 1.0.0
  */
 public class RemoveElement {
