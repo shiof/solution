@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.shiof</groupId>
-    <artifactId>one-day-one-code</artifactId>
+    <artifactId>solution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>one-day-one-code</name>
+    <name>solution</name>
     <description>一天一码</description>
 
     <properties>
