@@ -23,6 +23,6 @@ public class PalindromeTest {
     @Test
     public void test3(){
         boolean b = new Palindrome().solution(-121);
-        Assert.assertTrue(b);
+        Assert.assertFalse(b);
     }
 }
