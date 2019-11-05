@@ -49,9 +49,9 @@ import java.util.function.IntConsumer;
 public class ZeroEvenOdd {
     private int n;
 
-    private Semaphore zero = new Semaphore(1,false);
-    private Semaphore even = new Semaphore(0,false);
-    private Semaphore odd = new Semaphore(0,false);
+    private Semaphore zero = new Semaphore(1);
+    private Semaphore even = new Semaphore(0);
+    private Semaphore odd = new Semaphore(0);
 
     public ZeroEvenOdd(int n) {
         this.n = n;
