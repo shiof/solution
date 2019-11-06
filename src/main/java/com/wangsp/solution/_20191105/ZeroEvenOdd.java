@@ -62,6 +62,7 @@ public class ZeroEvenOdd {
         for (int i = 0; i < n; i++) {
             zero.acquire();
             printNumber.accept(0);
+            System.out.println(i & 1);
             if ((i & 1) == 0) {
                 odd.release();
             } else {
