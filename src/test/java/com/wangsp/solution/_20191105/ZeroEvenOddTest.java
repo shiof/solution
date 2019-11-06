@@ -2,6 +2,11 @@ package com.wangsp.solution._20191105;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
 import static org.junit.Assert.*;
 
 /**
@@ -10,30 +15,52 @@ import static org.junit.Assert.*;
  */
 public class ZeroEvenOddTest {
 
-    private ZeroEvenOdd zeroEvenOdd = new ZeroEvenOdd(5);
-
     @Test
     public void test() {
+        ZeroEvenOdd zeroEvenOdd = new ZeroEvenOdd(2);
+        run(zeroEvenOdd);
+    }
+
+
+    @Test
+    public void test_1() {
+        ZeroEvenOdd zeroEvenOdd = new ZeroEvenOdd(5);
+        run(zeroEvenOdd);
+    }
+
+    private void run(ZeroEvenOdd zeroEvenOdd) {
+        List<Integer> list = new ArrayList<>();
+
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(3, ()->{
+            System.out.println(list.size());
+            for (int value : list) {
+                System.out.print(value);
+            }
+        });
+
         new Thread(()->{
             try {
-                zeroEvenOdd.zero(System.out::print);
-            } catch (InterruptedException e) {
+                zeroEvenOdd.zero(list::add);
+                cyclicBarrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();
             }
         }).start();
 
         new Thread(()->{
             try {
-                zeroEvenOdd.even(System.out::print);
-            } catch (InterruptedException e) {
+                zeroEvenOdd.even(list::add);
+                cyclicBarrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();
             }
         }).start();
 
         new Thread(()->{
             try {
-                zeroEvenOdd.odd(System.out::print);
-            } catch (InterruptedException e) {
+                zeroEvenOdd.odd(list::add);
+                cyclicBarrier.await();
+            } catch (InterruptedException | BrokenBarrierException e) {
                 e.printStackTrace();
             }
         }).start();
